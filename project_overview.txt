@@ -18,6 +18,10 @@ the predicted song genre.
 characteristics
 
 
+--API--
+https://api.spotify.com/v1/tracks/
+https://developer.spotify.com/documentation/web-api/reference/#/operations/get-track
+
 # Plan #
 
 -- 11 Nov
@@ -25,6 +29,7 @@ characteristics
     - Create repo
     - Collect dataset
     - Explore dataset
+    - Upload dataset to database
     - Define variables
     - Create file/folder structure
     - Select machine learning model
