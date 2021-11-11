@@ -1,0 +1,54 @@
+## Final Project ##
+--------------------
+Machine learning model to determine the genre of a hypothetical song based from UI song characteristics
+--------------------
+
+
+# Overview #
+Take a dataset of songs which contains characteristics of each song. Use these
+to generate a model which predicts genre.
+
+Use this model to take inputs (song characteristics) and predict what genre this
+hypothetical (or real) song is likely to be.
+
+--BONUS--
+1. If I get time build a web interface for users to input song characteristics and returns
+the predicted song genre.
+2. The above, but return a list of Artists whose songs most likely resemble the input
+characteristics
+
+
+# Plan #
+
+-- 11 Nov
+    - Finalise topic
+    - Create repo
+    - Collect dataset
+    - Explore dataset
+    - Define variables
+    - Create file/folder structure
+    - Select machine learning model
+    - Begin coding
+
+
+-- 15 Nov
+    - Complete model
+    - Save model
+
+
+-- 16 Nov
+    - Create web files (HTML, CSS, JS)
+    - Upload model to Heroku?
+
+
+-- 18 Nov
+    - Connect model to web interface
+    - Play around with CSS
+    - Add extra improvements to model and/or interface
+
+
+-- 22 Nov
+    - Refine/test/fix
+
+
+-- 23 Nov - Final presentation
