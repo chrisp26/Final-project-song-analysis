@@ -1,0 +1,1233 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.1018.0949                               -->
+<workbook original-version='18.1' source-build='2021.3.3 (20213.21.1018.0949)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='merged_songs_data' inline='true' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='merged_songs_data' name='textscan.0d3ftwl103zm49173g6re0bm2ju0'>
+            <connection class='textscan' directory='L:/20-Final-Project/Songs_analysis/Final-project-song-analysis/Resources' filename='merged_songs_data.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='spotify_tracks_features' name='textscan.1ijqf5k1jl3yd11gllhz10y8u5v3'>
+            <connection class='textscan' directory='L:/20-Final-Project/Songs_analysis/Final-project-song-analysis/Resources' filename='spotify_tracks_features.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='id' ordinal='1' />
+            <column datatype='real' name='danceability' ordinal='2' />
+            <column datatype='real' name='energy' ordinal='3' />
+            <column datatype='integer' name='key' ordinal='4' />
+            <column datatype='real' name='loudness' ordinal='5' />
+            <column datatype='integer' name='mode' ordinal='6' />
+            <column datatype='real' name='speechiness' ordinal='7' />
+            <column datatype='real' name='acousticness' ordinal='8' />
+            <column datatype='real' name='instrumentalness' ordinal='9' />
+            <column datatype='real' name='liveness' ordinal='10' />
+            <column datatype='real' name='valence' ordinal='11' />
+            <column datatype='real' name='tempo' ordinal='12' />
+            <column datatype='integer' name='duration_ms' ordinal='13' />
+            <column datatype='real' name='time_signature' ordinal='14' />
+            <column datatype='real' name='popularity' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='integer' name='F1' ordinal='0' />
+              <column datatype='string' name='id' ordinal='1' />
+              <column datatype='real' name='danceability' ordinal='2' />
+              <column datatype='real' name='energy' ordinal='3' />
+              <column datatype='integer' name='key' ordinal='4' />
+              <column datatype='real' name='loudness' ordinal='5' />
+              <column datatype='integer' name='mode' ordinal='6' />
+              <column datatype='real' name='speechiness' ordinal='7' />
+              <column datatype='real' name='acousticness' ordinal='8' />
+              <column datatype='real' name='instrumentalness' ordinal='9' />
+              <column datatype='real' name='liveness' ordinal='10' />
+              <column datatype='real' name='valence' ordinal='11' />
+              <column datatype='real' name='tempo' ordinal='12' />
+              <column datatype='integer' name='duration_ms' ordinal='13' />
+              <column datatype='real' name='time_signature' ordinal='14' />
+              <column datatype='real' name='popularity' ordinal='15' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1ijqf5k1jl3yd11gllhz10y8u5v3' name='spotify_tracks_features.csv' table='[spotify_tracks_features#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+              <column datatype='string' name='id' ordinal='0' />
+              <column datatype='string' name='name' ordinal='1' />
+              <column datatype='string' name='album' ordinal='2' />
+              <column datatype='string' name='album_id' ordinal='3' />
+              <column datatype='string' name='artists' ordinal='4' />
+              <column datatype='string' name='artist_ids' ordinal='5' />
+              <column datatype='integer' name='track_number' ordinal='6' />
+              <column datatype='integer' name='disc_number' ordinal='7' />
+              <column datatype='boolean' name='explicit' ordinal='8' />
+              <column datatype='real' name='danceability' ordinal='9' />
+              <column datatype='real' name='energy' ordinal='10' />
+              <column datatype='integer' name='key' ordinal='11' />
+              <column datatype='real' name='loudness' ordinal='12' />
+              <column datatype='integer' name='mode' ordinal='13' />
+              <column datatype='real' name='speechiness' ordinal='14' />
+              <column datatype='real' name='acousticness' ordinal='15' />
+              <column datatype='real' name='instrumentalness' ordinal='16' />
+              <column datatype='real' name='liveness' ordinal='17' />
+              <column datatype='real' name='valence' ordinal='18' />
+              <column datatype='real' name='tempo' ordinal='19' />
+              <column datatype='integer' name='duration_ms' ordinal='20' />
+              <column datatype='real' name='time_signature' ordinal='21' />
+              <column datatype='integer' name='year' ordinal='22' />
+              <column datatype='string' name='release_date' ordinal='23' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[F1]' value='[merged_songs_data.csv].[F1]' />
+          <map key='[acousticness (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[acousticness]' />
+          <map key='[acousticness]' value='[merged_songs_data.csv].[acousticness]' />
+          <map key='[album]' value='[spotify_tracks_features.csv].[album]' />
+          <map key='[album_id]' value='[spotify_tracks_features.csv].[album_id]' />
+          <map key='[artist_ids]' value='[spotify_tracks_features.csv].[artist_ids]' />
+          <map key='[artists]' value='[spotify_tracks_features.csv].[artists]' />
+          <map key='[danceability (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[danceability]' />
+          <map key='[danceability]' value='[merged_songs_data.csv].[danceability]' />
+          <map key='[disc_number]' value='[spotify_tracks_features.csv].[disc_number]' />
+          <map key='[duration_ms (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[duration_ms]' />
+          <map key='[duration_ms]' value='[merged_songs_data.csv].[duration_ms]' />
+          <map key='[energy (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[energy]' />
+          <map key='[energy]' value='[merged_songs_data.csv].[energy]' />
+          <map key='[explicit]' value='[spotify_tracks_features.csv].[explicit]' />
+          <map key='[id (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[id]' />
+          <map key='[id]' value='[merged_songs_data.csv].[id]' />
+          <map key='[instrumentalness (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[instrumentalness]' />
+          <map key='[instrumentalness]' value='[merged_songs_data.csv].[instrumentalness]' />
+          <map key='[key (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[key]' />
+          <map key='[key]' value='[merged_songs_data.csv].[key]' />
+          <map key='[liveness (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[liveness]' />
+          <map key='[liveness]' value='[merged_songs_data.csv].[liveness]' />
+          <map key='[loudness (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[loudness]' />
+          <map key='[loudness]' value='[merged_songs_data.csv].[loudness]' />
+          <map key='[mode (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[mode]' />
+          <map key='[mode]' value='[merged_songs_data.csv].[mode]' />
+          <map key='[name]' value='[spotify_tracks_features.csv].[name]' />
+          <map key='[popularity]' value='[merged_songs_data.csv].[popularity]' />
+          <map key='[release_date]' value='[spotify_tracks_features.csv].[release_date]' />
+          <map key='[speechiness (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[speechiness]' />
+          <map key='[speechiness]' value='[merged_songs_data.csv].[speechiness]' />
+          <map key='[tempo (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[tempo]' />
+          <map key='[tempo]' value='[merged_songs_data.csv].[tempo]' />
+          <map key='[time_signature (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[time_signature]' />
+          <map key='[time_signature]' value='[merged_songs_data.csv].[time_signature]' />
+          <map key='[track_number]' value='[spotify_tracks_features.csv].[track_number]' />
+          <map key='[valence (spotify_tracks_features.csv)]' value='[spotify_tracks_features.csv].[valence]' />
+          <map key='[valence]' value='[merged_songs_data.csv].[valence]' />
+          <map key='[year]' value='[spotify_tracks_features.csv].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>danceability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[danceability]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>danceability</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>energy</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>key</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[key]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>key</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loudness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loudness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>loudness</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mode]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>mode</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speechiness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[speechiness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>speechiness</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acousticness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[acousticness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>acousticness</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instrumentalness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[instrumentalness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>instrumentalness</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liveness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[liveness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>liveness</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>valence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[valence]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>valence</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tempo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tempo]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>tempo</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_ms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_ms]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>duration_ms</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_signature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[time_signature]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>time_signature</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>album</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[album]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>album</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>album_id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[album_id]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>album_id</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artists</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artists]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>artists</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>artist_ids</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[artist_ids]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>artist_ids</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>track_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[track_number]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>track_number</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disc_number</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[disc_number]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>disc_number</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>explicit</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[explicit]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>explicit</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>danceability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[danceability (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>danceability</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>energy</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>key</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[key (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>key</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loudness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loudness (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>loudness</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mode (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>mode</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speechiness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[speechiness (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>speechiness</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acousticness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[acousticness (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>acousticness</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instrumentalness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[instrumentalness (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>instrumentalness</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liveness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[liveness (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>liveness</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>valence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[valence (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>valence</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tempo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tempo (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>tempo</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_ms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_ms (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>duration_ms</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_signature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[time_signature (spotify_tracks_features.csv)]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>time_signature</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>release_date</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[release_date]</local-name>
+            <parent-name>[spotify_tracks_features.csv]</parent-name>
+            <remote-alias>release_date</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Popularity (bin)' datatype='integer' name='[Popularity (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[popularity]' peg='0' size='5' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='merged_songs_data.csv' datatype='table' name='[__tableau_internal_object_id__].[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='spotify_tracks_features.csv' datatype='table' name='[__tableau_internal_object_id__].[spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2]' role='measure' type='quantitative' />
+      <column caption='Acousticness (Spotify Tracks Features.Csv)' datatype='real' name='[acousticness (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Acousticness' datatype='real' name='[acousticness]' role='measure' type='quantitative' />
+      <column caption='Album' datatype='string' name='[album]' role='dimension' type='nominal' />
+      <column caption='Album Id' datatype='string' name='[album_id]' role='dimension' type='nominal' />
+      <column caption='Artist Ids' datatype='string' name='[artist_ids]' role='dimension' type='nominal' />
+      <column caption='Artists' datatype='string' name='[artists]' role='dimension' type='nominal' />
+      <column caption='Danceability (Spotify Tracks Features.Csv)' datatype='real' name='[danceability (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+      <column caption='Disc Number' datatype='integer' name='[disc_number]' role='dimension' type='ordinal' />
+      <column caption='Duration Ms (Spotify Tracks Features.Csv)' datatype='integer' name='[duration_ms (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+      <column caption='Energy (Spotify Tracks Features.Csv)' datatype='real' name='[energy (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+      <column caption='Explicit' datatype='boolean' name='[explicit]' role='dimension' type='nominal' />
+      <column caption='Id (Spotify Tracks Features.Csv)' datatype='string' name='[id (spotify_tracks_features.csv)]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Instrumentalness (Spotify Tracks Features.Csv)' datatype='real' name='[instrumentalness (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+      <column caption='Key (Spotify Tracks Features.Csv)' datatype='integer' name='[key (spotify_tracks_features.csv)]' role='dimension' type='ordinal' />
+      <column caption='Key' datatype='integer' name='[key]' role='dimension' type='ordinal' />
+      <column caption='Liveness (Spotify Tracks Features.Csv)' datatype='real' name='[liveness (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+      <column caption='Loudness (Spotify Tracks Features.Csv)' datatype='real' name='[loudness (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+      <column caption='Mode (Spotify Tracks Features.Csv)' datatype='integer' name='[mode (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Mode' datatype='integer' name='[mode]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Release Date' datatype='string' name='[release_date]' role='dimension' type='nominal' />
+      <column caption='Speechiness (Spotify Tracks Features.Csv)' datatype='real' name='[speechiness (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+      <column caption='Tempo (Spotify Tracks Features.Csv)' datatype='real' name='[tempo (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+      <column caption='Time Signature (Spotify Tracks Features.Csv)' datatype='real' name='[time_signature (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Time Signature' datatype='real' name='[time_signature]' role='measure' type='quantitative' />
+      <column caption='Track Number' datatype='integer' name='[track_number]' role='dimension' type='ordinal' />
+      <column caption='Valence (Spotify Tracks Features.Csv)' datatype='real' name='[valence (spotify_tracks_features.csv)]' role='measure' type='quantitative' />
+      <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='merged_songs_data.csv' id='merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716'>
+            <properties context=''>
+              <relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='id' ordinal='1' />
+                  <column datatype='real' name='danceability' ordinal='2' />
+                  <column datatype='real' name='energy' ordinal='3' />
+                  <column datatype='integer' name='key' ordinal='4' />
+                  <column datatype='real' name='loudness' ordinal='5' />
+                  <column datatype='integer' name='mode' ordinal='6' />
+                  <column datatype='real' name='speechiness' ordinal='7' />
+                  <column datatype='real' name='acousticness' ordinal='8' />
+                  <column datatype='real' name='instrumentalness' ordinal='9' />
+                  <column datatype='real' name='liveness' ordinal='10' />
+                  <column datatype='real' name='valence' ordinal='11' />
+                  <column datatype='real' name='tempo' ordinal='12' />
+                  <column datatype='integer' name='duration_ms' ordinal='13' />
+                  <column datatype='real' name='time_signature' ordinal='14' />
+                  <column datatype='real' name='popularity' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='spotify_tracks_features.csv' id='spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2'>
+            <properties context=''>
+              <relation connection='textscan.1ijqf5k1jl3yd11gllhz10y8u5v3' name='spotify_tracks_features.csv' table='[spotify_tracks_features#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='string' name='id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='string' name='album' ordinal='2' />
+                  <column datatype='string' name='album_id' ordinal='3' />
+                  <column datatype='string' name='artists' ordinal='4' />
+                  <column datatype='string' name='artist_ids' ordinal='5' />
+                  <column datatype='integer' name='track_number' ordinal='6' />
+                  <column datatype='integer' name='disc_number' ordinal='7' />
+                  <column datatype='boolean' name='explicit' ordinal='8' />
+                  <column datatype='real' name='danceability' ordinal='9' />
+                  <column datatype='real' name='energy' ordinal='10' />
+                  <column datatype='integer' name='key' ordinal='11' />
+                  <column datatype='real' name='loudness' ordinal='12' />
+                  <column datatype='integer' name='mode' ordinal='13' />
+                  <column datatype='real' name='speechiness' ordinal='14' />
+                  <column datatype='real' name='acousticness' ordinal='15' />
+                  <column datatype='real' name='instrumentalness' ordinal='16' />
+                  <column datatype='real' name='liveness' ordinal='17' />
+                  <column datatype='real' name='valence' ordinal='18' />
+                  <column datatype='real' name='tempo' ordinal='19' />
+                  <column datatype='integer' name='duration_ms' ordinal='20' />
+                  <column datatype='real' name='time_signature' ordinal='21' />
+                  <column datatype='integer' name='year' ordinal='22' />
+                  <column datatype='string' name='release_date' ordinal='23' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[id]' />
+              <expression op='[id (spotify_tracks_features.csv)]' />
+            </expression>
+            <first-end-point object-id='merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716' />
+            <second-end-point object-id='spotify_tracks_features.csv_F8E4F68C53D344CD852446126E7E44E2' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Artists'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column caption='Artists' datatype='string' name='[artists]' role='dimension' type='nominal' />
+            <column-instance column='[popularity]' derivation='Max' name='[max:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[artists]' derivation='None' name='[none:artists:nk]' pivot='key' type='nominal' />
+            <column-instance column='[popularity]' derivation='None' name='[none:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:popularity:qk]' included-values='in-range'>
+            <min>0.0</min>
+            <max>77.0</max>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:artists:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[max:popularity:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:popularity:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:artists:nk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[max:popularity:qk]</cols>
+      </table>
+      <simple-id uuid='{D3828CA0-5A78-4E61-8007-94625C080F2E}' />
+    </worksheet>
+    <worksheet name='Popularity distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Popularity (bin)' datatype='integer' name='[Popularity (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[popularity]' peg='0' size='5' />
+            </column>
+            <column-instance column='[popularity]' derivation='Count' name='[cnt:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Popularity (bin)]' derivation='None' name='[none:Popularity (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[cnt:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Popularity (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Popularity (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{5316337F-798F-48A1-92E1-1B21C3473705}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Popularity distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Popularity (bin):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{C8875C38-DED1-4E6E-8AAB-D72FCD5608D1}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Artists'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:artists:nk]</field>
+            <field>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:name:nk]</field>
+            <field>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:popularity:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0FA23F8D-B893-45BF-8D68-617EB1FCFB49}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Artists' width='192'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Popularity distribution' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
