@@ -49,7 +49,7 @@
                   <li><a href="visualizations/wind.html">Wind Speed</a></li>
                 </ul>
               </li>
-              <li><a href="models.html">Models</a></li>
+              <li><a href="definitions.html">Definitions</a></li>
               <li><a href="data.html">Data</a></li>
             </ul>
           </div><!-- /.navbar-collapse -->
@@ -104,8 +104,8 @@
       <section class="row">
         <div class="col-md-8 col-lg-12">
           <article class="description-content">
-            <h2>Track Popularity</h2>
-            <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return the popularity numbers of XX songs.&nbsp; &nbsp;</p>
+            <h2>Retrieving Track Popularity</h2>
+            <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return the popularity numbers of 74,000 songs.&nbsp; &nbsp;</p>
           <img src="assets/images/Spotify_api_code.JPG" width="797" height="1024" alt=""/>          </article>
         </div>
       </section>
@@ -116,7 +116,10 @@
           <article class="description-content">
             <h2>Final dataset</h2>
             <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return the popularity numbers of XX songs.&nbsp; &nbsp;</p>
-            <img src="assets/images/final_df.JPG" width="1419" alt="songs dataframe"/>
+            <img src="assets/images/final_df.JPG" width="1000" alt="songs dataframe"/>
+		  <p>
+			  The mode of the popularity of songs in this dataset was 0; 39% of the sampled songs had a popularity of 0.
+			  </p>
 			  <p class="text-center">
 				  <button type="button" class="btn btn-lg btn-default">Continue</button>
 			  </p>
