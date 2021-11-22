@@ -62,28 +62,35 @@
     <div class="container">
       <article class="description-content row">
         <div class="col-xs-12">
-          <h1 class="description-header">Further look into song attributes data&nbsp;</h1>
+          <h1 class="description-header">Machine learning</h1>
+			<h3>Regression analysis</h3>
           <hr class="description-hr"/>
-          <p class="description-text">Before runnig any machine learning over the datasets, it is useful to take a look and see if there are any obvious correlations.  MatplotLib was used to create some quick scatter plots&nbsp; comparing some song attributes which may have relationships.&nbsp; &nbsp; &nbsp; &nbsp;</p>
+          <p class="description-text">The goal is to generate a model which can be used to predict the popularity of a song. For this I have used scikit-learn to run the following regression models:</p>
+          <ol>
+            <li>Linear Regression</li>
+            <li>Ridge Regression</li>
+            <li>Lassoo Regression</li>
+            <li>Elastic Net Regression</li>
+          </ol>
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Energy vs. Danceability</h2>
-          <img src="assets/images/energy_v_danceability.png" alt="Danceability v energy" class="img-responsive">
+          <h2 class="comparison-header">Linear Regression Model</h2>
+          <img src="../Images/linear-regression-model.PNG" alt="Danceability v energy" class="img-responsive">
 <hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Energy vs. Accousticness</h2>
-          <a href="visualizations/humidity.html"><img src="assets/images/accousticness_v_liveness.png" alt="Latitude vs. Humidity" class="comparison-image img-responsive"></a>
+          <h2 class="comparison-header">Ridge Model</h2>
+          <a href="visualizations/humidity.html"><img src="../Images/ridge-model.PNG" alt="Latitude vs. Humidity" class="comparison-image img-responsive"></a>
           <hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Liveness vs. Accousticness</h2>
-          <a href="visualizations/cloudiness.html"><img src="assets/images/accousticness_v_liveness.png" alt="Latitude vs. Cloudiness" class="comparison-image img-responsive"></a>
+          <h2 class="comparison-header">Lasso Model</h2>
+          <a href="visualizations/cloudiness.html"><img src="../Images/lassoo-model.PNG" alt="Latitude vs. Cloudiness" class="comparison-image img-responsive"></a>
           <hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Energy vs. Loudness</h2>
-          <a href="visualizations/wind.html"><img src="assets/images/loudness_v_energy.png" alt="Latitude vs. Wind Speed" class="comparison-image img-responsive"></a>
+          <h2 class="comparison-header">Elasticnet Model</h2>
+          <a href="visualizations/wind.html"><img src="../Images/elastic-net-model.PNG" alt="Latitude vs. Wind Speed" class="comparison-image img-responsive"></a>
         </div>
       </article>
     </div>
@@ -91,16 +98,16 @@
       <section class="row">
         <div class="col-md-8 col-lg-12">
           <article class="description-content">
-            <h2>Heatmap Correlations</h2>
-            <p>Taking a bit of a further look into a correlations heatmap table shows us that there are positive and negative correlations between many of the track characteristics. The strongest positive correlation being energy vs loudness (r=.82). The strongest negative correlation being accousticness vs energy (r=-.80). Unsurprising.</p>
+            <h2>Evaluation</h2>
+            <p>All regression models returned very low R-square scores. Even when removing variables and running with different combinations it became clear quickly that my original hypothesis was going to fail.</p>
 			  <p>
-			  Will these help differences help my model once to predict popularity?
+			  Initially when creating these models the were done with the sample of ~3,000 popularity measures. I spent time retrieving more data via the Spotify API to increase this sample to ~75,000. This only resulted in the lower R-square scores shown here.
 			  </p>
             <img src="assets/images/correlation_table.JPG" alt="Correlation table" width="1100"/></article>
 		  <p class="text-center">
 		    <button type="button" class="btn btn-lg btn-default"><a href="#index">Back</a></button>
-            <button type="button" class="btn btn-lg btn-default"><a href="machine-learning">Machine Learning</a></button>
-          </p>
+            <button type="button" class="btn btn-lg btn-default"><a href="">Next</a></button>
+          </a></p>
         </div>
       </section>
     </div>
