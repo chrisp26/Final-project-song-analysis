@@ -1,0 +1,27 @@
+Multiple Linear Regression
+- Input Values: 'danceability', 'energy', 'key', 'loudness', 'mode','speechiness','acousticness','instrumentalness','liveness','valence','tempo','time_signature','duration_ms']
+- y: ['popularity']
+- R2 Score: .0441
+
+
+Linear Regression
+- X = ["danceability"]
+- y = ["popularity"]
+- R2 Score: .049
+
+Random Forests
+-  y (features) = 'danceability','energy', 'loudness',
+       'speechiness', 'acousticness', 'instrumentalness', 'liveness',
+       'valence', 'tempo' 
+- x (labels) = songs which have a popularity >= 1
+- R2 score = .70
+-Features which contribute the most:
+[(0.11996226614159061, 'loudness'),
+ (0.11229924658439212, 'tempo'),
+ (0.11224118180500553, 'danceability'),
+ (0.11158173098706065, 'acousticness'),
+ (0.11094885656383886, 'valence'),
+ (0.11073365695156218, 'liveness'),
+ (0.11026311838860366, 'energy'),
+ (0.10969119005893582, 'speechiness'),
+ (0.10227875251901071, 'instrumentalness')]
