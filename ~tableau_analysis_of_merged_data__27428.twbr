@@ -1,0 +1,2020 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20213.21.1018.0949                               -->
+<workbook source-build='2021.3.3 (20213.21.1018.0949)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location id='tableau_analysis_of_merged_data' path='/workbooks' revision='1.0' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='merged_songs_data' inline='true' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='merged_songs_data' name='textscan.0d3ftwl103zm49173g6re0bm2ju0'>
+            <connection class='textscan' directory='L:/20-Final-Project/Songs_analysis/Final-project-song-analysis/Resources' filename='merged_songs_data.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='id' ordinal='1' />
+            <column datatype='real' name='danceability' ordinal='2' />
+            <column datatype='real' name='energy' ordinal='3' />
+            <column datatype='integer' name='key' ordinal='4' />
+            <column datatype='real' name='loudness' ordinal='5' />
+            <column datatype='integer' name='mode' ordinal='6' />
+            <column datatype='real' name='speechiness' ordinal='7' />
+            <column datatype='real' name='acousticness' ordinal='8' />
+            <column datatype='real' name='instrumentalness' ordinal='9' />
+            <column datatype='real' name='liveness' ordinal='10' />
+            <column datatype='real' name='valence' ordinal='11' />
+            <column datatype='real' name='tempo' ordinal='12' />
+            <column datatype='integer' name='duration_ms' ordinal='13' />
+            <column datatype='real' name='time_signature' ordinal='14' />
+            <column datatype='real' name='popularity' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='id' ordinal='1' />
+            <column datatype='real' name='danceability' ordinal='2' />
+            <column datatype='real' name='energy' ordinal='3' />
+            <column datatype='integer' name='key' ordinal='4' />
+            <column datatype='real' name='loudness' ordinal='5' />
+            <column datatype='integer' name='mode' ordinal='6' />
+            <column datatype='real' name='speechiness' ordinal='7' />
+            <column datatype='real' name='acousticness' ordinal='8' />
+            <column datatype='real' name='instrumentalness' ordinal='9' />
+            <column datatype='real' name='liveness' ordinal='10' />
+            <column datatype='real' name='valence' ordinal='11' />
+            <column datatype='real' name='tempo' ordinal='12' />
+            <column datatype='integer' name='duration_ms' ordinal='13' />
+            <column datatype='real' name='time_signature' ordinal='14' />
+            <column datatype='real' name='popularity' ordinal='15' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_AU&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>danceability</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[danceability]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>danceability</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>energy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[energy]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>energy</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>key</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[key]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>key</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>loudness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[loudness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>loudness</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>mode</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[mode]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>mode</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>speechiness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[speechiness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>speechiness</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>acousticness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[acousticness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>acousticness</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>instrumentalness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[instrumentalness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>instrumentalness</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>liveness</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[liveness]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>liveness</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>valence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[valence]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>valence</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tempo</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[tempo]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>tempo</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_ms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[duration_ms]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>duration_ms</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>time_signature</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[time_signature]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>time_signature</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>popularity</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[popularity]</local-name>
+            <parent-name>[merged_songs_data.csv]</parent-name>
+            <remote-alias>popularity</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column aggregation='None' caption='Acousticness (bin)' datatype='integer' name='[Acousticness (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-4' formula='[acousticness]' peg='0' size='0.0202' />
+      </column>
+      <column caption='Duration seconds' datatype='real' name='[Calculation_1906148582910574594]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[duration_ms]/1000' />
+      </column>
+      <column aggregation='None' caption='Danceability (bin)' datatype='integer' name='[Danceability (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-3' formula='[danceability]' peg='0' size='0.028' />
+      </column>
+      <column aggregation='None' caption='Duration Ms (bin)' datatype='integer' name='[Duration Ms (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='4' formula='[duration_ms]' peg='0' size='62412' />
+      </column>
+      <column aggregation='None' caption='Duration seconds (bin)' datatype='integer' name='[Duration seconds (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='1' formula='[Calculation_1906148582910574594]' peg='0' size='62' />
+      </column>
+      <column aggregation='None' caption='Energy (bin)' datatype='integer' name='[Energy (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-2' formula='[energy]' peg='0' size='0.02' />
+      </column>
+      <column aggregation='None' caption='Instrumentalness (bin)' datatype='integer' name='[Instrumentalness (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-3' formula='[instrumentalness]' peg='0' size='0.015' />
+      </column>
+      <column aggregation='None' caption='Liveness (bin)' datatype='integer' name='[Liveness (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-2' formula='[liveness]' peg='0' size='0.02' />
+      </column>
+      <column aggregation='None' caption='Loudness (bin)' datatype='integer' name='[Loudness (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-2' formula='[loudness]' peg='0' size='0.75' />
+      </column>
+      <column aggregation='None' caption='Popularity (bin)' datatype='integer' name='[Popularity (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='0' formula='[popularity]' peg='0' size='5' />
+      </column>
+      <column aggregation='None' caption='Speechiness (bin)' datatype='integer' name='[Speechiness (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-4' formula='[speechiness]' peg='0' size='0.0206' />
+      </column>
+      <column aggregation='None' caption='Tempo (bin)' datatype='integer' name='[Tempo (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-1' formula='[tempo]' peg='0' size='2.5' />
+      </column>
+      <column aggregation='None' caption='Time Signature (bin)' datatype='integer' name='[Time Signature (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-3' formula='[time_signature]' peg='0' size='1.082' />
+      </column>
+      <column aggregation='None' caption='Valence (bin)' datatype='integer' name='[Valence (bin)]' role='dimension' type='ordinal'>
+        <calculation class='bin' decimals='-3' formula='[valence]' peg='0' size='0.021' />
+      </column>
+      <_.fcp.ObjectModelTableType.true...column caption='merged_songs_data.csv' datatype='table' name='[__tableau_internal_object_id__].[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]' role='measure' type='quantitative' />
+      <column caption='Acousticness' datatype='real' name='[acousticness]' role='measure' type='quantitative' />
+      <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+      <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+      <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+      <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+      <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+      <column caption='Key' datatype='integer' name='[key]' role='dimension' type='ordinal' />
+      <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+      <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+      <column caption='Mode' datatype='integer' name='[mode]' role='measure' type='quantitative' />
+      <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+      <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+      <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+      <column caption='Time Signature' datatype='real' name='[time_signature]' role='measure' type='quantitative' />
+      <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+      <column-instance column='[acousticness]' derivation='Avg' name='[avg:acousticness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[danceability]' derivation='Avg' name='[avg:danceability:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[energy]' derivation='Avg' name='[avg:energy:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[instrumentalness]' derivation='Avg' name='[avg:instrumentalness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[liveness]' derivation='Avg' name='[avg:liveness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[loudness]' derivation='Avg' name='[avg:loudness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[speechiness]' derivation='Avg' name='[avg:speechiness:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[time_signature]' derivation='Avg' name='[avg:time_signature:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[valence]' derivation='Avg' name='[avg:valence:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_GB' class='hyper' dbname='L:/20-Final-Project/Songs_analysis/Final-project-song-analysis/Tableau/merged_songs_data.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='11/19/2021 07:52:12 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='merged_songs_data' increment-value='%null%' refresh-type='create' rows-inserted='1204025' timestamp-start='2021-11-19 07:52:02.453' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>F1</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[F1]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>F1</remote-alias>
+              <ordinal>0</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1204025</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1204025</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RGB' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>danceability</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[danceability]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>danceability</remote-alias>
+              <ordinal>2</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2336</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>energy</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[energy]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>energy</remote-alias>
+              <ordinal>3</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6083</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>key</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[key]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>key</remote-alias>
+              <ordinal>4</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>loudness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[loudness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>loudness</remote-alias>
+              <ordinal>5</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>116548</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>mode</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[mode]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>mode</remote-alias>
+              <ordinal>6</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>speechiness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[speechiness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>speechiness</remote-alias>
+              <ordinal>7</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4293</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>acousticness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[acousticness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>acousticness</remote-alias>
+              <ordinal>8</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16208</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>instrumentalness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[instrumentalness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>instrumentalness</remote-alias>
+              <ordinal>9</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>21638</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>liveness</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[liveness]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>liveness</remote-alias>
+              <ordinal>10</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5105</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>valence</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[valence]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>valence</remote-alias>
+              <ordinal>11</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>4676</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>tempo</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[tempo]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tempo</remote-alias>
+              <ordinal>12</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>245682</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>duration_ms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[duration_ms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>duration_ms</remote-alias>
+              <ordinal>13</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>204276</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>time_signature</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[time_signature]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>time_signature</remote-alias>
+              <ordinal>14</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>popularity</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[popularity]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>popularity</remote-alias>
+              <ordinal>15</ordinal>
+              <family>merged_songs_data.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>142</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:time_signature:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:valence:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:acousticness:qk]&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:loudness:qk]&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:liveness:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:danceability:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:instrumentalness:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:energy:qk]&quot;</bucket>
+            </map>
+            <map to='#ff9da7'>
+              <bucket>&quot;[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:speechiness:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Australia&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='id' />
+        <field-sort-custom-order field='danceability' />
+        <field-sort-custom-order field='energy' />
+        <field-sort-custom-order field='key' />
+        <field-sort-custom-order field='loudness' />
+        <field-sort-custom-order field='mode' />
+        <field-sort-custom-order field='speechiness' />
+        <field-sort-custom-order field='acousticness' />
+        <field-sort-custom-order field='instrumentalness' />
+        <field-sort-custom-order field='liveness' />
+        <field-sort-custom-order field='valence' />
+        <field-sort-custom-order field='tempo' />
+        <field-sort-custom-order field='duration_ms' />
+        <field-sort-custom-order field='Calculation_1906148582910574594' />
+        <field-sort-custom-order field='time_signature' />
+        <field-sort-custom-order field='popularity' />
+        <field-sort-custom-order field='Calculation_1906148582909562880' />
+        <field-sort-custom-order field='Acousticness (bin)' />
+        <field-sort-custom-order field='Danceability (bin)' />
+        <field-sort-custom-order field='Duration Ms (bin)' />
+        <field-sort-custom-order field='Popularity (bin)' />
+      </field-sort-info>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='merged_songs_data.csv' id='merged_songs_data.csv_626C93AEFD624E188C1A6FB90FFF1716'>
+            <properties context=''>
+              <relation connection='textscan.0d3ftwl103zm49173g6re0bm2ju0' name='merged_songs_data.csv' table='[merged_songs_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_AU' separator=','>
+                  <column datatype='integer' name='F1' ordinal='0' />
+                  <column datatype='string' name='id' ordinal='1' />
+                  <column datatype='real' name='danceability' ordinal='2' />
+                  <column datatype='real' name='energy' ordinal='3' />
+                  <column datatype='integer' name='key' ordinal='4' />
+                  <column datatype='real' name='loudness' ordinal='5' />
+                  <column datatype='integer' name='mode' ordinal='6' />
+                  <column datatype='real' name='speechiness' ordinal='7' />
+                  <column datatype='real' name='acousticness' ordinal='8' />
+                  <column datatype='real' name='instrumentalness' ordinal='9' />
+                  <column datatype='real' name='liveness' ordinal='10' />
+                  <column datatype='real' name='valence' ordinal='11' />
+                  <column datatype='real' name='tempo' ordinal='12' />
+                  <column datatype='integer' name='duration_ms' ordinal='13' />
+                  <column datatype='real' name='time_signature' ordinal='14' />
+                  <column datatype='real' name='popularity' ordinal='15' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Accousticness'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Acousticness (bin)' datatype='integer' name='[Acousticness (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-4' formula='[acousticness]' peg='0' size='0.0202' />
+            </column>
+            <column caption='Acousticness' datatype='real' name='[acousticness]' role='measure' type='quantitative' />
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Acousticness (bin)]' derivation='None' name='[none:Acousticness (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Acousticness (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{CA610C17-77E0-48A6-A061-3AFF1B9D0360}' />
+    </worksheet>
+    <worksheet name='Danceability'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols />
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{33DC6DE8-91F9-4882-967F-F7833747AE77}' />
+    </worksheet>
+    <worksheet name='Energy'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Energy (bin)' datatype='integer' name='[Energy (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[energy]' peg='0' size='0.02' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column-instance column='[Energy (bin)]' derivation='None' name='[none:Energy (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Energy (bin):qk]' field-type='quantitative' max='1.0' min='0.0' range-type='fixed' scope='cols' type='space' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Energy (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{BE64400E-3CE5-4F2F-9D85-A1970E7FC502}' />
+    </worksheet>
+    <worksheet name='Instrumentalness'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Instrumentalness (bin)' datatype='integer' name='[Instrumentalness (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-3' formula='[instrumentalness]' peg='0' size='0.015' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+            <column-instance column='[Instrumentalness (bin)]' derivation='None' name='[none:Instrumentalness (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Instrumentalness (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{0AD86EDD-FB3C-4533-A3C5-94DA58C0B264}' />
+    </worksheet>
+    <worksheet name='Length seconds'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column caption='Duration seconds' datatype='real' name='[Calculation_1906148582910574594]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[duration_ms]/1000' />
+            </column>
+            <column aggregation='None' caption='Duration seconds (bin)' datatype='integer' name='[Duration seconds (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='1' formula='[Calculation_1906148582910574594]' peg='0' size='62' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Duration Ms' datatype='integer' name='[duration_ms]' role='measure' type='quantitative' />
+            <column-instance column='[Duration seconds (bin)]' derivation='None' name='[none:Duration seconds (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Duration seconds (bin)]' derivation='None' name='[none:Duration seconds (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Duration seconds (bin):ok]'>
+            <groupfilter count='20' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='AVG([popularity])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='relevant' user:ui-enumeration='exclusive' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Duration seconds (bin):ok]' />
+                  <groupfilter function='union'>
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='13' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='14' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='15' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='16' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='18' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='19' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='20' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='21' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='22' />
+                    <groupfilter function='member' level='[none:Duration seconds (bin):ok]' member='39' />
+                  </groupfilter>
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Duration seconds (bin):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Duration seconds (bin):ok]' value='58' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='723' />
+                <format attr='maxheight' value='723' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Duration seconds (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Duration Ms (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Duration seconds (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{84263CEC-D2BC-4386-97CB-516274C54C73}' />
+    </worksheet>
+    <worksheet name='Liveness'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Liveness (bin)' datatype='integer' name='[Liveness (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[liveness]' peg='0' size='0.02' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+            <column-instance column='[Liveness (bin)]' derivation='None' name='[none:Liveness (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Liveness (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Liveness (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{2930E664-2671-4D86-8892-320EB0D8834F}' />
+    </worksheet>
+    <worksheet name='Loudness'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Loudness (bin)' datatype='integer' name='[Loudness (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-2' formula='[loudness]' peg='0' size='0.75' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+            <column-instance column='[Loudness (bin)]' derivation='None' name='[none:Loudness (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Loudness (bin):qk]' included-values='in-range'>
+            <min>-32</min>
+            <max>0</max>
+          </filter>
+          <slices>
+            <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Loudness (bin):qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Loudness (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Liveness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Loudness (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{69B850F9-D814-4876-9484-280848D02803}' />
+    </worksheet>
+    <worksheet name='Pop vs accousticness (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column-instance column='[danceability]' derivation='Sum' name='[sum:danceability:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Shape' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.60000002384185791' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:danceability:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</cols>
+      </table>
+      <simple-id uuid='{63A4F10F-DFCE-46E9-B45B-826BC93203F4}' />
+    </worksheet>
+    <worksheet name='Popularity distribution'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Popularity (bin)' datatype='integer' name='[Popularity (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='0' formula='[popularity]' peg='0' size='5' />
+            </column>
+            <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+            <column-instance column='[Popularity (bin)]' derivation='None' name='[none:Popularity (bin):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[id]' derivation='None' name='[none:id:nk]' pivot='key' type='nominal' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:id:nk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Popularity (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Popularity (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{5316337F-798F-48A1-92E1-1B21C3473705}' />
+    </worksheet>
+    <worksheet name='Scatter graphs'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column caption='Acousticness' datatype='real' name='[acousticness]' role='measure' type='quantitative' />
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column caption='Energy' datatype='real' name='[energy]' role='measure' type='quantitative' />
+            <column caption='Instrumentalness' datatype='real' name='[instrumentalness]' role='measure' type='quantitative' />
+            <column caption='Liveness' datatype='real' name='[liveness]' role='measure' type='quantitative' />
+            <column caption='Loudness' datatype='real' name='[loudness]' role='measure' type='quantitative' />
+            <column-instance column='[acousticness]' derivation='None' name='[none:acousticness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[danceability]' derivation='None' name='[none:danceability:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[energy]' derivation='None' name='[none:energy:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[instrumentalness]' derivation='None' name='[none:instrumentalness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[liveness]' derivation='None' name='[none:liveness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[loudness]' derivation='None' name='[none:loudness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[speechiness]' derivation='None' name='[none:speechiness:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[tempo]' derivation='None' name='[none:tempo:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[time_signature]' derivation='None' name='[none:time_signature:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[valence]' derivation='None' name='[none:valence:qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+            <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+            <column caption='Time Signature' datatype='real' name='[time_signature]' role='measure' type='quantitative' />
+            <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='937' />
+                <format attr='maxwidth' value='937' />
+                <format attr='minheight' value='100' />
+                <format attr='maxheight' value='100' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:acousticness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:danceability:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:energy:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:instrumentalness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:liveness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='6' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:loudness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='7' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:speechiness:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='8' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:tempo:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='9' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:time_signature:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='10' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:valence:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:acousticness:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:danceability:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:energy:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:instrumentalness:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:liveness:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:loudness:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:speechiness:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:tempo:qk] + ([federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:time_signature:qk] + [federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:valence:qk])))))))))</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</cols>
+      </table>
+      <simple-id uuid='{F0851650-320A-46BD-817A-CDAB50CA8EFF}' />
+    </worksheet>
+    <worksheet name='Sheet 14'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column caption='Danceability' datatype='real' name='[danceability]' role='measure' type='quantitative' />
+            <column caption='Id' datatype='string' name='[id]' role='dimension' type='nominal' />
+            <column-instance column='[id]' derivation='None' name='[none:id:nk]' pivot='key' type='nominal' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column-instance column='[danceability]' derivation='Sum' name='[sum:danceability:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[popularity]' derivation='Sum' name='[sum:popularity:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:id:nk]' />
+            </encodings>
+            <reference-line axis-column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:danceability:qk]' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:danceability:qk]' z-order='1' />
+            <reference-line axis-column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:popularity:qk]' enable-instant-analytics='true' formula='average' id='refline1' label-type='automatic' probability='95' scope='per-pane' value-column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:popularity:qk]' z-order='2' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[sum:danceability:qk]</cols>
+      </table>
+      <simple-id uuid='{3FEC10A3-FA19-4CD6-87B2-6C3F1FA4589A}' />
+    </worksheet>
+    <worksheet name='Speechiness'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Speechiness (bin)' datatype='integer' name='[Speechiness (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-4' formula='[speechiness]' peg='0' size='0.0206' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Speechiness (bin)]' derivation='None' name='[none:Speechiness (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column caption='Speechiness' datatype='real' name='[speechiness]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Speechiness (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Liveness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Loudness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Speechiness (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{ACC12FC3-CA1F-4D99-B8F6-91E49EC50664}' />
+    </worksheet>
+    <worksheet name='Tempo'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Tempo (bin)' datatype='integer' name='[Tempo (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-1' formula='[tempo]' peg='0' size='2.5' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Tempo (bin)]' derivation='None' name='[none:Tempo (bin):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Tempo (bin)]' derivation='None' name='[none:Tempo (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column caption='Tempo' datatype='real' name='[tempo]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Tempo (bin):ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Tempo (bin):ok]' />
+              <groupfilter function='member' level='[none:Tempo (bin):ok]' member='0' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Tempo (bin):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Tempo (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Liveness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Loudness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Speechiness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Tempo (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{7E4E7B1A-A3DB-4B71-9FAF-C92FE438E035}' />
+    </worksheet>
+    <worksheet name='Valence'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='merged_songs_data' name='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0zw2kdl0eo7axg1fgc0ht07mjnkl'>
+            <column aggregation='None' caption='Valence (bin)' datatype='integer' name='[Valence (bin)]' role='dimension' type='ordinal'>
+              <calculation class='bin' decimals='-3' formula='[valence]' peg='0' size='0.021' />
+            </column>
+            <column-instance column='[popularity]' derivation='Avg' name='[avg:popularity:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Valence (bin)]' derivation='None' name='[none:Valence (bin):qk]' pivot='key' type='quantitative' />
+            <column caption='Popularity' datatype='real' name='[popularity]' role='measure' type='quantitative' />
+            <column caption='Valence' datatype='real' name='[valence]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+          </pane>
+        </panes>
+        <rows>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[avg:popularity:qk]</rows>
+        <cols>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[none:Valence (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Acousticness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Danceability (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Energy (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Instrumentalness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Liveness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Loudness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Speechiness (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Tempo (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Time Signature (bin)]</column>
+          <column>[federated.0zw2kdl0eo7axg1fgc0ht07mjnkl].[Valence (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{ABF78BA4-E354-47FA-9B04-EBA388200058}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='Attributes vs popularity'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='29250' id='3' name='Danceability' w='26600' x='3300' y='4125' />
+        <zone h='29625' id='5' name='Accousticness' w='29900' x='32000' y='4000' />
+        <zone h='29750' id='6' name='Length seconds' w='29200' x='63200' y='4125' />
+        <zone h='30875' id='7' name='Energy' w='28600' x='1800' y='33500' />
+        <zone h='31125' id='8' name='Instrumentalness' w='29200' x='32800' y='33125' />
+        <zone h='30875' id='9' name='Liveness' w='30500' x='63600' y='33625' />
+        <zone h='29875' id='10' name='Loudness' w='28900' x='1900' y='65250' />
+        <zone h='29250' id='11' name='Speechiness' w='29100' x='33000' y='65625' />
+        <zone h='28875' id='12' name='Tempo' w='29700' x='65000' y='65875' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2250' minheight='2250' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='18' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='17' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+                <zone fixed-size='237' h='29625' id='5' is-fixed='true' name='Accousticness' w='29900' x='32000' y='4000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='234' h='29250' id='3' is-fixed='true' name='Danceability' w='26600' x='3300' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='238' h='29750' id='6' is-fixed='true' name='Length seconds' w='29200' x='63200' y='4125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='249' h='31125' id='8' is-fixed='true' name='Instrumentalness' w='29200' x='32800' y='33125'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='247' h='30875' id='7' is-fixed='true' name='Energy' w='28600' x='1800' y='33500'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='247' h='30875' id='9' is-fixed='true' name='Liveness' w='30500' x='63600' y='33625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='239' h='29875' id='10' is-fixed='true' name='Loudness' w='28900' x='1900' y='65250'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='234' h='29250' id='11' is-fixed='true' name='Speechiness' w='29100' x='33000' y='65625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='231' h='28875' id='12' is-fixed='true' name='Tempo' w='29700' x='65000' y='65875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{F78680FC-460F-4508-B745-29CA87344F6C}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Popularity distribution'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C8875C38-DED1-4E6E-8AAB-D72FCD5608D1}' />
+    </window>
+    <window class='worksheet' name='Scatter graphs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BE4A62E7-B30A-4081-A2E8-A8651341F9B9}' />
+    </window>
+    <window class='worksheet' name='Danceability'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{8BFEDCD8-E67E-4806-8FE7-E830D39AD6EE}' />
+    </window>
+    <window class='worksheet' name='Accousticness'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{CBC6469F-B65D-4EC0-A98E-456CB9D52D37}' />
+    </window>
+    <window class='worksheet' name='Length seconds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{A68BDB19-85BD-4F2D-AF6A-559B2F148841}' />
+    </window>
+    <window class='worksheet' name='Energy'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{03310702-201F-45C0-B64B-2D5FB1D90D5C}' />
+    </window>
+    <window class='worksheet' name='Instrumentalness'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{6121B750-770F-49E7-8158-CCFA377CEC74}' />
+    </window>
+    <window class='worksheet' name='Liveness'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{69A235E2-9D5D-4D42-BEAB-4BF279E1E2A3}' />
+    </window>
+    <window class='worksheet' name='Loudness'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{B4A24854-EB59-4669-B380-1DC796CDD238}' />
+    </window>
+    <window class='worksheet' name='Speechiness'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{254456A8-9AD2-4C7B-877B-B62AC73213B9}' />
+    </window>
+    <window class='worksheet' name='Tempo'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{6AD942DC-8D5B-4F6E-B05B-6D29EF38D980}' />
+    </window>
+    <window class='worksheet' name='Valence'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{C8318942-461A-4818-9F7D-CF8E818BA727}' />
+    </window>
+    <window class='worksheet' name='Pop vs accousticness (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{19A52CB6-172F-4671-AF64-F740EBF5EF96}' />
+    </window>
+    <window class='dashboard' name='Attributes vs popularity'>
+      <viewpoints>
+        <viewpoint name='Accousticness'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Danceability'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Energy'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Instrumentalness'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Length seconds'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Liveness'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Loudness'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Speechiness'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tempo'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{06BE8F6E-6311-4268-9676-32233FE234B0}' />
+    </window>
+    <window class='worksheet' name='Sheet 14'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9A5E0F3D-15C9-49B8-B4A7-D967C5CE059C}' />
+    </window>
+  </windows>
+</workbook>
