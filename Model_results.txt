@@ -25,3 +25,13 @@ Random Forests
  (0.11026311838860366, 'energy'),
  (0.10969119005893582, 'speechiness'),
  (0.10227875251901071, 'instrumentalness')]
+
+ Support Vector Machine (SVM)
+                   precision    recall  f1-score   support
+
+       Unpopular       0.00      0.00      0.00      7327
+might_be_popular       0.60      1.00      0.75     11193
+
+        accuracy                           0.60     18520
+       macro avg       0.30      0.50      0.38     18520
+    weighted avg       0.37      0.60      0.46     18520
