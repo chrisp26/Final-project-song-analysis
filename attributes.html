@@ -62,52 +62,56 @@
     <div class="container">
       <article class="description-content row">
         <div class="col-xs-12">
-          <h1 class="description-header">Machine learning</h1>
-			<h3>Regression analysis</h3>
+          <h1 class="description-header">Popularity vs. individual attributes</h1>
           <hr class="description-hr"/>
-          <p class="description-text">The goal is to generate a model which can be used to predict the popularity of a song. For this I have used scikit-learn to run the following regression models:</p>
-          <ol>
-            <li>Linear Regression</li>
-            <li>Ridge Regression</li>
-            <li>Lassoo Regression</li>
-            <li>Elastic Net Regression</li>
-          </ol>
+          <p class="description-text">When looking at individual attributes against the popularity of songs, there does appear to be some trends. Danceability and Energy seems to be higher in more popular songs while Accousticness appears to be at the lower end in more popular songs.</p>
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Linear Regression Model</h2>
-          <img src="../Images/linear-regression-model.PNG" alt="Danceability v energy" class="img-responsive">
+          <h2 class="comparison-header">Accousticness</h2>
+          <img src="Images/individual-attributes-popularity/Accousticness.png" alt="" class="img-responsive">
 <hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Ridge Model</h2>
-          <a href="visualizations/humidity.html"><img src="../Images/ridge-model.PNG" alt="Latitude vs. Humidity" class="comparison-image img-responsive"></a>
-          <hr class="visible-xs visible-sm">
+          <h2 class="comparison-header">Danceability</h2>
+          <img src="Images/individual-attributes-popularity/Danceability.png" alt="" class="comparison-image img-responsive">
+<hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Lasso Model</h2>
-          <a href="visualizations/cloudiness.html"><img src="../Images/lassoo-model.PNG" alt="Latitude vs. Cloudiness" class="comparison-image img-responsive"></a>
-          <hr class="visible-xs visible-sm">
+          <h2 class="comparison-header">Energy</h2>
+          <img src="Images/individual-attributes-popularity/Energy.png" class="comparison-image img-responsive">
+<hr class="visible-xs visible-sm">
         </div>
         <div class="col-md-6">
-          <h2 class="comparison-header">Elasticnet Model</h2>
-          <a href="visualizations/wind.html"><img src="../Images/elastic-net-model.PNG" alt="Latitude vs. Wind Speed" class="comparison-image img-responsive"></a>
-        </div>
+          <h2 class="comparison-header">Instrumentalness</h2>
+        <img src="Images/individual-attributes-popularity/Instrumentalness.png" class="comparison-image img-responsive"> </div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Length (s)</h2>
+          <img src="Images/individual-attributes-popularity/Length_seconds.png" class="comparison-image img-responsive"></div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Liveness</h2>
+          <img src="Images/individual-attributes-popularity/Liveness.png" class="comparison-image img-responsive"></div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Spechiness</h2>
+          <img src="Images/individual-attributes-popularity/Speechiness.png" alt="Speechiness" class="comparison-image img-responsive"></div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Tempo</h2>
+          <img src="Images/individual-attributes-popularity/Tempo.png" alt="Tempo" class="comparison-image img-responsive"></div>
+        <div class="col-md-6">
+          <h2 class="comparison-header">Valence</h2>
+          <img src="Images/individual-attributes-popularity/Valence.png" alt="Valence" class="comparison-image img-responsive"></div>
       </article>
     </div>
     <div class="container">
       <section class="row">
         <div class="col-md-8 col-lg-12">
           <article class="description-content">
-            <h2>Evaluation</h2>
-            <p>All regression models returned very low R-square scores. Even when removing variables and running with different combinations it became clear quickly that my original hypothesis was going to fail.</p>
-			  <p>
-			  Initially when creating these models the were done with the sample of ~3,000 popularity measures. I spent time retrieving more data via the Spotify API to increase this sample to ~75,000. This only resulted in the lower R-square scores shown here.
-			  </p>
-            <img src="assets/images/correlation_table.JPG" alt="Correlation table" width="1100"/></article>
+            <h2>Machine learning</h2>
+            <p>The first thing to look into is some simple regression analysis using Scikit Learn.</p>
+
 		  <p class="text-center">
-		    <button type="button" class="btn btn-lg btn-default"><a href="#index">Back</a></button>
-            <button type="button" class="btn btn-lg btn-default"><a href="">Next</a></button>
-          </a></p>
+		    <button type="button" class="btn btn-lg btn-default"><a href="Final-project-song-analysis/index.html">Back</a></button>
+            <button type="button" class="btn btn-lg btn-default"><a href="/Final-project-song-analysis/regression.html">Regression</a></button>
+          </p>
         </div>
       </section>
     </div>
