@@ -41,12 +41,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right navbar-right-custom">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Info <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Models <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                 <li><a href="definitions.html">Definitions</a></li>
-                  <li><a href="machine-learning.html">Machine Learning</a></li>
-                  <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
-                  <li><a href="visualizations/wind.html">Wind Speed</a></li>
+                 <li><a href="Final-project-song-analysis/regression.html">Regression</a></li>
+                  <li><a href="Final-project-song-analysis/multiple-linear-regression.html">Multiple Linear Regression</a></li>
+                  <li><a href="Final-project-song-analysis/random-forest.html">Random Forests</a></li>
+                  <li><a href="visualizations/svm.html">SVM</a></li>
                 </ul>
               </li>
               <li><a href="definitions.html">Definitions</a></li>
@@ -61,7 +61,7 @@
     <!-- Start of container -->
     <div class="container">
       <section class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
           <article class="description-content">
             <h1 class="description-header">Project Summary</h1>
             <hr class="description-hr"/>
@@ -70,22 +70,7 @@
             <p>The assembled dataset came from a downloaded CSV file containing song characteristics and was appended with song popularity ratings obtained through the Spotify public API.</p>
           </article>
         </div>
-        <div class="col-md-4">
-
-          <!-- Start of Visualizations imageNav Area -->
-          <section id="imageNav-area">
-            <div class="imageNav-content">
-              <h2 class="description-header">Models</h2>
-              <hr />
-              <div id="images">
-                <img src="assets/images/model_lin_regression.png" alt="Linear Regression" class="imageNav-photo"> <a href="visualizations/humidity.html"><img src="assets/images/model_multiple_lin_regression.png" alt="Latitude vs. Humidity" class="imageNav-photo"></a>
-              <img src="assets/images/model_random_forest.png" alt="Random Forest" class="imageNav-photo"> <img src="assets/images/model_svm.png" alt="SVM" class="imageNav-photo"> </div>
-            </div>
-          </section>
-          <!-- End of the Visualizations imageNav Area -->
-
-        </div>
-      </section>
+</section>
     </div>
     <div class="container">
       <section class="row">
@@ -102,7 +87,7 @@
         <div class="col-md-8 col-lg-12">
           <article class="description-content">
             <h2>Retrieving Track Popularity</h2>
-            <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return the popularity numbers of 74,000 songs.&nbsp; &nbsp;</p>
+            <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return multiple batches of data. These were then cleaned, validated and stored giving me the popularity values for 74,000 songs.</p>
           <img src="assets/images/Spotify_api_code.JPG" width="797" height="1024" alt=""/>          </article>
         </div>
       </section>
@@ -111,14 +96,14 @@
       <section class="row">
         <div class="col-md-8 col-lg-12">
           <article class="description-content">
-            <h2>Final dataset</h2>
-            <p>Track popularity was retrieved by hitting the Spotify public api. This returned the popularity of each song as number between 0 and 100. A few issues were had with the number of calls I could make to the API, but by splitting the requests into batches with different API keys I was able to return the popularity numbers of XX songs.&nbsp; &nbsp;</p>
+            <h2>Dataset</h2>
+            <p>After cleaning the data and reducing down the number of columns I was left with a dataset containing a key (id) and 14 track attributes including popularity. These data were stored locally as a CSV for the purposes of creating a model.</p>
             <img src="assets/images/final_df.JPG" width="1000" alt="songs dataframe"/>
 		  <p>
 			  The mode of the popularity of songs in this dataset was 0. 39% of the sampled songs had a popularity of 0.
 			  </p>
 			  <p class="text-center">
-				  <button type="button" class="btn btn-lg btn-default"><a href="Final-project-song-analysis/correlations.html" style="color:inherit">Continue</a></button>
+				  <button type="button" class="btn btn-lg btn-default"><a href="attributes.html" style="color:inherit">Continue</a></button>
 			  </p>
           </article>
         </div>

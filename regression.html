@@ -41,12 +41,12 @@
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right navbar-right-custom">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Models <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                 <li><a href="definitions.html">Definitions</a></li>
-                  <li><a href="machine-learning.html">Machine Learning</a></li>
-                  <li><a href="visualizations/cloudiness.html">Cloudiness</a></li>
-                  <li><a href="visualizations/wind.html">Wind Speed</a></li>
+                 <li><a href="Final-project-song-analysis/regression.html">Regression</a></li>
+                  <li><a href="Final-project-song-analysis/multiple-linear-regression.html">Multiple Linear Regression</a></li>
+                  <li><a href="Final-project-song-analysis/random-forest.html">Random Forests</a></li>
+                  <li><a href="visualizations/svm.html">SVM</a></li>
                 </ul>
               </li>
               <li><a href="definitions.html">Definitions</a></li>
@@ -59,72 +59,41 @@
     <!-- End of navbar -->
 
     <!-- Start of container -->
-    <div class="container">
+  <div class="container">
       <article class="description-content row">
         <div class="col-xs-12">
-          <h1 class="description-header">Popularity vs. individual attributes</h1>
+          <h1 class="description-header">Regression analysis using select attributes</h1>
           <hr class="description-hr"/>
-          <p class="description-text">When looking at individual attributes against the popularity of songs, there does appear to be some trends. Danceability and Energy seems to be higher in more popular songs while Accousticness appears to be at the lower end in more popular songs.</p>
-        </div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Accousticness</h2>
-          <img src="Images/individual-attributes-popularity/Accousticness.png" alt="" class="img-responsive">
-<hr class="visible-xs visible-sm">
-        </div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Danceability</h2>
-          <img src="Images/individual-attributes-popularity/Danceability.png" alt="" class="comparison-image img-responsive">
-<hr class="visible-xs visible-sm">
-        </div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Energy</h2>
-          <img src="Images/individual-attributes-popularity/Energy.png" class="comparison-image img-responsive">
-<hr class="visible-xs visible-sm">
-        </div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Instrumentalness</h2>
-        <img src="Images/individual-attributes-popularity/Instrumentalness.png" class="comparison-image img-responsive"> </div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Length (s)</h2>
-          <img src="Images/individual-attributes-popularity/Length_seconds.png" class="comparison-image img-responsive"></div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Liveness</h2>
-          <img src="Images/individual-attributes-popularity/Liveness.png" class="comparison-image img-responsive"></div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Spechiness</h2>
-          <img src="Images/individual-attributes-popularity/Speechiness.png" alt="Speechiness" class="comparison-image img-responsive"></div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Tempo</h2>
-          <img src="Images/individual-attributes-popularity/Tempo.png" alt="Tempo" class="comparison-image img-responsive"></div>
-        <div class="col-md-6">
-          <h2 class="comparison-header">Valence</h2>
-          <img src="Images/individual-attributes-popularity/Valence.png" alt="Valence" class="comparison-image img-responsive"></div>
+          <p class="description-text">As a start to looking at building a model it is worthwhile seeing if a simple regression model can be used taking in two data points. This will help towards confirming whether there are in fact relationships which can be modelled.</p>
+		  <p class="description-text">Loudness:energy appears to have the strongest positive correlation while accousticness:energy appears to have the strongest negative correlation. Other values mostly have weak correlations.</p>
+	    <img src="assets/images/correlation_table.JPG" width="1000" alt=""/>
+			<br>
+			<br>
+		  <p class="description-text">To select variables a Pandas was used to create a simple correlation table showing which song attributes have positive and negative correlations along with the strength of these.</p>
+	    </div>
+</article>
+      <article class="description-content row">
+        <div class="col-xs-12">
+		  <h2>Regression Model</h2>
+		  <p><a href='https://github.com/chrisp26/Final-project-song-analysis/blob/main/Code/Models/1_regression.ipynb' target="_blank">Github Python Notebook: regression model</a></p>
+			<br>
+		  <p>
+			After running this model with different pairs of variables I struggled to get any meaningful scores. When training the model with 'danceability' (X) and 'popularity' (y) - variables I'd guess could be accurately modelled - the Sklearn Linear Regression model gave back a training and testing scores of .047 and .049 respectively.
+			</p>
+	    <img src="assets/images/regression_code.PNG" width="937" height="382" alt="regression code" /> 
+		  <br>
+		  <br>
+		  <p class="text-center">
+		    <button type="button" class="btn btn-lg btn-default"><a href="/Final-project-song-analysis/correlations-popularity.html">Back</a></button>
+            <button type="button" class="btn btn-lg btn-default"><a href="/Final-project-song-analysis/multiple-linear-regression.html">Regression 2</a></button>
+          </p>
+		  </div>
       </article>
     </div>
-    <div class="container">
-      <section class="row">
-        <div class="col-md-8 col-lg-12">
-          <article class="description-content">
-            <h2>Machine learning</h2>
-            <p>The first thing to look into is some simple regression analysis using Scikit Learn.</p>
 
-		  <p class="text-center">
-		    <button type="button" class="btn btn-lg btn-default"><a href="/Final-project-song-analysis/correlations.html">Back</a></button>
-            <button type="button" class="btn btn-lg btn-default"><a href="/Final-project-song-analysis/regression.html">Regression</a></button>
-          </p>
-        </div>
-      </section>
-    </div>
     <!-- End of container  -->
 
-    <!-- Start of footer -->
-    <footer class="footer navbar-fixed-bottom">
-      <div class="two-toned-footer-color"></div>
-      <p class="text-muted text-muted-footer text-center">
-        &copy; Chris Penn's final project UWA Data Visualisation 2021
-      </p>
-    </footer>
-    <!-- End of footer -->
+    <!-- Start of footer -->    <!-- End of footer -->
 
     <!-- jQuery CDN -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
